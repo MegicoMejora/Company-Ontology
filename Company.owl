@@ -1,0 +1,2122 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/CourseWork/Company#"
+     xml:base="http://www.semanticweb.org/ontologies/CourseWork/Company"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#address -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#address">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#asscociated_with -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#asscociated_with">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Associated_Products"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Main_Products"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#ceo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#ceo">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#ceo_of"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#CEO"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#ceo_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#ceo_of">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#CEO"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#city_hosts -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#city_hosts">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#city_located"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#City"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#city_located -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#city_located">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#City"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#country_hosts -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#country_hosts">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#country_located"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Country"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#country_located -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#country_located">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#headquarter -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#headquarter">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#headquarter_of"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#headquarter_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#headquarter_of">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Country"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#industry_type -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#industry_type">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Industry_Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#industry_type_companies -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#industry_type_companies">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#industry_type_of"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Industry_Type"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#industry_type_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#industry_type_of">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Industry_Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#is_MNC -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#is_MNC">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#is_MNC"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Country"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#is_subsidiary_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#is_subsidiary_of">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#subsidiary"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Subsidiary"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#manufactured_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#manufactured_by">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#manufactures"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Products"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#manufactures -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#manufactures">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Products"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#parent_organization -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#parent_organization">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#parent_organization_of"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Parent_Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#parent_organization_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#parent_organization_of">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Parent_Organization"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#service_provided -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#service_provided">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#service_provided_by"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Service"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#service_provided_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#service_provided_by">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Service"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#stock_exchange_listed -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#stock_exchange_listed">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#stock_listed"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#StockExchange"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#stock_listed -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#stock_listed">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#StockExchange"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#subsidiary -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#subsidiary">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Subsidiary"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#assets -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#assets">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#ceos -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#ceos">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#CEO"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#equity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#equity">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#formation_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#formation_date">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#formation_year -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#formation_year">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#market_capitalisation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#market_capitalisation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#name">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#net_income -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#net_income">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#number_of_companies -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#number_of_companies">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#number_of_employees -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#number_of_employees">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#number_of_locations -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#number_of_locations">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#operating_income -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#operating_income">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#profit -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#profit">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#ranking -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#ranking">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#revenue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#revenue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Accounting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Accounting">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Service_Industry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Accunting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Accunting">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Advertising -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Advertising">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Service_Industry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Aerospace -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Aerospace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Manufacturing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Agriculture -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Agriculture">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Industry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Airline -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Airline">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Transportation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Apparel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Apparel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Retail"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Assets -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Assets">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Finacials"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Associated_Products -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Associated_Products">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Products"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Automative -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Automative">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Manufacturing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Automobile -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Automobile">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Industry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Bank -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Bank">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Finance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Broadcasting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Broadcasting">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Information_and_Communication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Brokerage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Brokerage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Finance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Builder -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Builder">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Construction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Business -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Business">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#CEO -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#CEO">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#City -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#City"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Company -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Company_Type -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Company_Type"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Construction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Construction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Industry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Corporate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Corporate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Business"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Country"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Ctractor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Ctractor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Construction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Department -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Department"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Department_Store -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Department_Store">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Retail"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Electricity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Electricity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Energy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Electronic_Store -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Electronic_Store">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Retail"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Electronics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Electronics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Manufacturing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Energy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Energy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Industry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Equity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Equity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Finacials"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Farm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Farm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Agriculture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Finacials -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Finacials"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Finance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Finance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Industry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Food -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Food">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Industry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Food_Distribution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Food_Distribution">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Food_Production -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Food_Production">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Gas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Gas">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Energy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Government -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Government">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Health -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Health">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Insurance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Health_Care -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Health_Care">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Service_Industry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Home_Products -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Home_Products">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Retail"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Hospitality -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Hospitality">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Industry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Human_Resources -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Human_Resources">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Industry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Industry"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Industry_Type -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Industry_Type"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Information_Technology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Information_Technology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Information_and_Communication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Information_and_Communication -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Information_and_Communication">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Industry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Insurance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Insurance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Industry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Intern -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Intern">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Life -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Life">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Insurance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Main_Products -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Main_Products">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Products"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Manager -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Manager">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Manufacturing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Manufacturing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Industry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Marketing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Marketing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Mining -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Mining">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Industry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Name -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Name"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Net_Income -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Net_Income">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Finacials"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Oil -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Oil">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Energy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Parent_Organization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Parent_Organization"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Partnership -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Partnership">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Business"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Plumbing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Plumbing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Construction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#President -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#President">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Private -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Private">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Production -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Production">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Products -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Products"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Profit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Profit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Finacials"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Property -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Property">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Insurance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Public -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Public">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Publishing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Publishing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Information_and_Communication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Ranch -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Ranch">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Agriculture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Real_Estate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Real_Estate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Industry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Retail -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Retail">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Industry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Revenue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Revenue">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Finacials"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Sales -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Sales">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Service"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Service_Industry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Service_Industry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Industry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Shipping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Shipping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Transportation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Staff -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Staff">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#StockExchange -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#StockExchange"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Subsidiary -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Subsidiary"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Telecommunication -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Telecommunication">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Information_and_Communication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Trading_Name -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Trading_Name">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#StockExchange"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Transportation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Transportation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Industry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Utilities -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Utilities">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Industry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Warehousing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Warehousing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Industry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Wind_Energy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Wind_Energy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Energy"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Aeroplanes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Aeroplanes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Main_Products"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Aerospace -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Aerospace">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Industry_Type"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Airbus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Airbus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Airline"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <ceo rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Guillaume_Faury"/>
+        <city_located rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Leiden"/>
+        <country_located rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Netherlands"/>
+        <headquarter rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Netherlands"/>
+        <industry_type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Aerospace"/>
+        <manufactures rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Aeroplanes"/>
+        <parent_organization rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Airbus_Group_SE"/>
+        <stock_exchange_listed rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#NYSE"/>
+        <subsidiary rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Airbus_SAS"/>
+        <assets rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.1519E11</assets>
+        <equity rdf:datatype="http://www.w3.org/2001/XMLSchema#double">9.72E9</equity>
+        <formation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18-12-1970</formation_date>
+        <formation_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1970</formation_year>
+        <market_capitalisation rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0102E11</market_capitalisation>
+        <name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Airbus</name>
+        <net_income rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.05E9</net_income>
+        <number_of_employees rdf:datatype="http://www.w3.org/2001/XMLSchema#int">133671</number_of_employees>
+        <number_of_locations rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</number_of_locations>
+        <operating_income rdf:datatype="http://www.w3.org/2001/XMLSchema#double">5.07E9</operating_income>
+        <profit rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.02E9</profit>
+        <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</ranking>
+        <revenue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">7.05E10</revenue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Airbus_Group_SE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Airbus_Group_SE"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Airbus_SAS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Airbus_SAS"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Airline -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Airline">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Industry_Type"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Alibaba -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Alibaba">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Retail"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Amanda_Blanc -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Amanda_Blanc">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#CEO"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Amazon.com -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Amazon.com">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Retail"/>
+        <ceo rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Jeff_Bezos"/>
+        <city_located rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Seattle"/>
+        <country_located rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#USA"/>
+        <headquarter rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#USA"/>
+        <industry_type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Retail"/>
+        <service_provided rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Retail"/>
+        <stock_exchange_listed rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Nasdaq"/>
+        <assets rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.212E11</assets>
+        <equity rdf:datatype="http://www.w3.org/2001/XMLSchema#double">9.34E10</equity>
+        <formation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">05-07-1994</formation_date>
+        <formation_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1994</formation_year>
+        <name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Amazon.com</name>
+        <net_income rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.133E10</net_income>
+        <number_of_employees rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1298000</number_of_employees>
+        <operating_income rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.209E10</operating_income>
+        <profit rdf:datatype="http://www.w3.org/2001/XMLSchema#double">7.11E9</profit>
+        <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ranking>
+        <revenue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.8606E11</revenue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Apple -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Apple">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Information_Technology"/>
+        <asscociated_with rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Computer_Peripherals"/>
+        <ceo rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Tim_Cook"/>
+        <city_located rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#California"/>
+        <country_located rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#USA"/>
+        <headquarter rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#USA"/>
+        <industry_type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Information_Technology"/>
+        <manufactures rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Computers"/>
+        <stock_exchange_listed rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#NYSE"/>
+        <assets rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.2388E11</assets>
+        <equity rdf:datatype="http://www.w3.org/2001/XMLSchema#double">6.533E12</equity>
+        <name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Apple Inc</name>
+        <net_income rdf:datatype="http://www.w3.org/2001/XMLSchema#double">5.741E10</net_income>
+        <operating_income rdf:datatype="http://www.w3.org/2001/XMLSchema#double">6.628E10</operating_income>
+        <profit rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.032E10</profit>
+        <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">147000</ranking>
+        <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ranking>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Arvind_Krishna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Arvind_Krishna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#CEO"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Automobile -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Automobile">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Industry_Type"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Automobiles -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Automobiles">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Main_Products"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Aviva_Insurance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Aviva_Insurance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Insurance"/>
+        <ceo rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Amanda_Blanc"/>
+        <city_located rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#London"/>
+        <country_located rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#United_Kingdom"/>
+        <headquarter rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#United_Kingdom"/>
+        <industry_type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Insurance"/>
+        <service_provided rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Insurance"/>
+        <stock_exchange_listed rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#LSE"/>
+        <assets rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.7985E11</assets>
+        <equity rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.056E10</equity>
+        <name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Aviva Insurance</name>
+        <net_income rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.91E9</net_income>
+        <number_of_employees rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31000</number_of_employees>
+        <profit rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.61E9</profit>
+        <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</ranking>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#BBC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#BBC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Broadcasting"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#BP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#BP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <ceo rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Bernard_Looney"/>
+        <city_located rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#London"/>
+        <country_located rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#United_Kingdom"/>
+        <headquarter rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#United_Kingdom"/>
+        <industry_type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Gas"/>
+        <manufactures rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Petrol"/>
+        <stock_exchange_listed rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#LSE"/>
+        <name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">British Petroleum</name>
+        <number_of_employees rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22000</number_of_employees>
+        <profit rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.004E10</profit>
+        <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">234</ranking>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#BT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#BT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Telecommunication"/>
+        <city_located rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#London"/>
+        <country_located rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#United_Kingdom"/>
+        <headquarter rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#United_Kingdom"/>
+        <industry_type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Telecommunication"/>
+        <service_provided rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Communication"/>
+        <stock_exchange_listed rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#LSE"/>
+        <name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">British Telecom</name>
+        <number_of_employees rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">105300</number_of_employees>
+        <profit rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.73E9</profit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Balfour_Beatty_Plc -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Balfour_Beatty_Plc">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Builder"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <ceo rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Leo_Quinn"/>
+        <city_located rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#London"/>
+        <country_located rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#United_Kingdom"/>
+        <industry_type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Builder"/>
+        <service_provided rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Contruction"/>
+        <name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Balfour Beatty Plc</name>
+        <number_of_employees rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18000</number_of_employees>
+        <profit rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.01E9</profit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Bank -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Bank">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Industry_Type"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Banking -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Banking">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Service"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Barclays_Bank -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Barclays_Bank">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Bank"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <ceo rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Jes_Staley"/>
+        <city_located rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#London"/>
+        <country_located rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#United_Kingdom"/>
+        <headquarter rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#United_Kingdom"/>
+        <industry_type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Banking"/>
+        <service_provided rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Banking"/>
+        <stock_exchange_listed rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#LSE"/>
+        <assets rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.43E12</assets>
+        <equity rdf:datatype="http://www.w3.org/2001/XMLSchema#double">6.658E10</equity>
+        <formation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17-11-1690</formation_date>
+        <formation_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1690</formation_year>
+        <name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Barclays</name>
+        <net_income rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.46E9</net_income>
+        <number_of_employees rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">83500</number_of_employees>
+        <profit rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.02E9</profit>
+        <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</ranking>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Beijing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Beijing"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Berlin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Berlin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#City"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Bernard_Looney -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Bernard_Looney">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#CEO"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Boeing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Boeing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Airline"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <ceo rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Dave_Calhoun"/>
+        <city_located rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Dallas"/>
+        <country_located rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#USA"/>
+        <headquarter rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#USA"/>
+        <industry_type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Aerospace"/>
+        <manufactures rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Aeroplanes"/>
+        <stock_exchange_listed rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#NYSE"/>
+        <subsidiary rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Boeing_UK"/>
+        <name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Boeing</name>
+        <number_of_employees rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">98000</number_of_employees>
+        <profit rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.02E9</profit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Boeing_UK -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Boeing_UK">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#British_Gas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#British_Gas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Gas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Broadcasting -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Broadcasting">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Industry_Type"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Brokerage -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Brokerage">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Industry_Type"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Builder -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Builder">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Industry_Type"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#California -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#California">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#City"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#China -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#China">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#China_National_Petroleum -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#China_National_Petroleum">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Oil"/>
+        <ceo rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Zhou_Jiping"/>
+        <city_located rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Beijing"/>
+        <country_located rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#China"/>
+        <headquarter rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#China"/>
+        <industry_type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Gas"/>
+        <manufactures rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Petrol"/>
+        <name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">China National Petroleum</name>
+        <number_of_employees rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">460724</number_of_employees>
+        <profit rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.065E10</profit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Christopher_J._Nassetta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Christopher_J._Nassetta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#CEO"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Communication -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Communication">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Service"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Computer_Peripherals -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Computer_Peripherals">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Associated_Products"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Computers -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Computers">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Main_Products"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Contruction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Contruction">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Service"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Dallas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Dallas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#City"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Daniel_Zhang -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Daniel_Zhang">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#CEO"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Dave_Calhoun -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Dave_Calhoun">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#CEO"/>
+        <country_located rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#USA"/>
+        <headquarter rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#USA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Doug_McMillon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Doug_McMillon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#CEO"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Electricity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Electricity">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Main_Products"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Farm -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Farm">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Industry_Type"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#France -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#France">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Gas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Gas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Industry_Type"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Germany -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Germany">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Google -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Google">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Information_Technology"/>
+        <ceo rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Sundar_Pitchai"/>
+        <city_located rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#California"/>
+        <country_located rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#USA"/>
+        <industry_type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Information_Technology"/>
+        <service_provided rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Information_Service"/>
+        <assets rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.82309E12</assets>
+        <formation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">04-09-1998</formation_date>
+        <formation_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1998</formation_year>
+        <number_of_employees rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">139995</number_of_employees>
+        <profit rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.003E10</profit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Guillaume_Faury -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Guillaume_Faury">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#CEO"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#HSBC_Bank -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#HSBC_Bank">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Bank"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <city_located rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#London"/>
+        <country_located rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#United_Kingdom"/>
+        <headquarter rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#United_Kingdom"/>
+        <industry_type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Bank"/>
+        <service_provided rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Banking"/>
+        <name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">HSBC</name>
+        <number_of_employees rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">85000</number_of_employees>
+        <profit rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.367E10</profit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Hilton -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Hilton">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Hospitality"/>
+        <ceo rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Christopher_J._Nassetta"/>
+        <city_located rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#California"/>
+        <country_located rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#USA"/>
+        <industry_type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Hospitality"/>
+        <service_provided rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Hospitality_Service"/>
+        <stock_exchange_listed rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Nasdaq"/>
+        <name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Hilton</name>
+        <number_of_employees rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">173000</number_of_employees>
+        <profit rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.96E9</profit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Hospitality -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Hospitality">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Industry_Type"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Hospitality_Service -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Hospitality_Service">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Service"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Hsptality_Service -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Hsptality_Service">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Service"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#IBM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#IBM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Information_Technology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Information_Service -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Information_Service">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Main_Products"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Information_Technology -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Information_Technology">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Industry_Type"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Insurance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Insurance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Service"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Intel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Intel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Information_Technology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Investment_Service -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Investment_Service">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Associated_Products"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#JP_Morgan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#JP_Morgan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Brokerage"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Jamie_Dimon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Jamie_Dimon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#CEO"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Jeff_Bezos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Jeff_Bezos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#CEO"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Jes_Staley -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Jes_Staley">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#CEO"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#LSE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#LSE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#StockExchange"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Lei_Weiguo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Lei_Weiguo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Leiden -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Leiden">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#City"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Leo_Quinn -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Leo_Quinn">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#CEO"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#London -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#London">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#City"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Manufacturing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Manufacturing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Industry_Type"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Microsoft -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Microsoft">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Information_Technology"/>
+        <ceo rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Satya_Nadella"/>
+        <city_located rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#California"/>
+        <country_located rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#USA"/>
+        <headquarter rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#USA"/>
+        <industry_type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Information_Technology"/>
+        <manufactures rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Software"/>
+        <stock_exchange_listed rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Nasdaq"/>
+        <name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Microsoft</name>
+        <number_of_employees rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">136000</number_of_employees>
+        <profit rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.003E10</profit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#NYSE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#NYSE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#StockExchange"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Nasdaq -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Nasdaq">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#StockExchange"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Netherlands -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Netherlands">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#New_York_City -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#New_York_City">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#City"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Nuno_Matos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Nuno_Matos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#CEO"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Oil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Oil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Industry_Type"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Openfield_Group -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Openfield_Group">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Farm"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Petrol -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Petrol">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Main_Products"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Porsche -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Porsche">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Automobile"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Retail -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Retail">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Service"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Royal_Dutch_Shell -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Royal_Dutch_Shell">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Oil"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Satya_Nadella -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Satya_Nadella">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#CEO"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Saudi_Arabia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Saudi_Arabia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Saudi_Aramco -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Saudi_Aramco">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Oil"/>
+        <name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Saudi Aramco</name>
+        <number_of_employees rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">96000</number_of_employees>
+        <profit rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.32E9</profit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Seattle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Seattle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#City"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Sinopec_Group -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Sinopec_Group">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Oil"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Software -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Software">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Main_Products"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#State_Grid -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#State_Grid">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Electricity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Sundar_Pitchai -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Sundar_Pitchai">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#CEO"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Telecommunication -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Telecommunication">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Industry_Type"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Tim_Cook -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Tim_Cook">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#CEO"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Tokyo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Tokyo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#City"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Toyota_Motor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Toyota_Motor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Automobile"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#USA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#USA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Unilever -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Unilever">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Manufacturing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#United_Kingdom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#United_Kingdom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Volkswagen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Volkswagen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Automobile"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Walmart -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Walmart">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Company"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#Retail"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CourseWork/Company#Zhou_Jiping -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/CourseWork/Company#Zhou_Jiping">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/CourseWork/Company#CEO"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
